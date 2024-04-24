@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 3</title>
+</head>
+<body>
+    <h1>Practice 3</h1>
+    <p>Enter your password twice to verify:</p>
+    First Password: <input type="password" id="a"><br>
+    Second Password: <input type="password" id="b"><br>
+    <button id="c">Verify Passwords</button>
+
+    <script>
+        document.getElementById("c").addEventListener("click", () => {
+            
+            let password1 = document.getElementById("a").value;
+            let password2 = document.getElementById("b").value;
+
+            if (password1.length < 8 || password1 !== password2) {
+                
+                alert("Passwords must be at least eight characters long and match.");
+            } else {
+                
+                alert("Passwords matched!");
+            }
+        });
+    </script>
+</body>
+</html>

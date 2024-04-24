@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 2</title>
+</head>
+<body>
+    <p id="random-paragraph" style="border-width: 10px; border-style: solid; margin-bottom: 0;">Sleep deprivation causes all sorts of challenges and problems. When one doesn’t get enough sleep one’s mind doesn’t work clearly. Studies have shown that after staying awake for 24 hours one’s ability to do simple math is greatly impaired. Driving tired has been shown to be as bad as driving drunk. Moods change, depression, anxiety, and mania can be induced by lack of sleep. As much as people try to do without enough sleep it is a wonder more crazy things don’t happen in this world.</p>
+    
+    Red Border(0-255): <input type="text" id="b"><br>
+    Green Border(0-255): <input type="text" id="c"><br>
+    Blue Border(0-255): <input type="text" id="d"><br>
+    Border-Width: <input type="text" id="e"><br>
+    Red Background(0-255): <input type="text" id="f"><br>
+    Green Background(0-255): <input type="text" id="g"><br>
+    Blue Background(0-255): <input type="text" id="h"><br>
+    <button id="apply">Apply changes!</button>
+
+    <script>
+        document.getElementById("apply").addEventListener("click", () => {
+            let a = document.getElementById("random-paragraph");
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+            let d = document.getElementById("d").value;
+            let e = document.getElementById("e").value;
+            let f = document.getElementById("f").value;
+            let g = document.getElementById("g").value;
+            let h = document.getElementById("h").value;
+
+            if (e !== "") {
+                let bw = e + "px";
+                a.style.borderWidth = bw;
+            }
+
+            a.style.borderColor = `rgb(${b},${c},${d})`;
+            a.style.backgroundColor = `rgb(${f},${g},${h})`;
+        });
+    </script>
+</body>
+</html>
